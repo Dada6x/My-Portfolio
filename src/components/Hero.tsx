@@ -9,10 +9,10 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500 pb-7">
+    <section className="relative min-h-screen overflow-hidden bg-white  dark:bg-black transition-colors duration-500 pb-7 border-r border-black">
       {/* ================= Squares Background ================= */}
       <div className="absolute inset-0 z-0">
-        <Squares squareSize={45} />
+        <Squares squareSize={64} />
       </div>
 
       {/* ================= Vertical frame lines ================= */}
@@ -54,7 +54,7 @@ export function Hero() {
             </div>
 
             {/* Footer */}
-            <div className="mt-16 text-xs font-mono text-gray-500 dark:text-gray-600">
+            <div className="mt-16 text-s font-mono text-gray-500 dark:text-gray-600 ">
               Damascus University • Software Engineer
             </div>
           </div>

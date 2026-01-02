@@ -136,7 +136,7 @@ const Squares: React.FC<SquaresProps> = ({ squareSize = 40 }) => {
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full block pointer-events-none"
+      className="w-full h-full block pointer-events-none "
     />
   );
 };

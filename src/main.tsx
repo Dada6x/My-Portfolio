@@ -11,3 +11,7 @@ createRoot(document.getElementById('root')!).render(
     </ThemeProvider>
   </StrictMode>
 );
+
+// https://reactbits.dev/animations/logo-loop
+// https://reactbits.dev/animations/target-cursor
+// https://reactbits.dev/animations/click-spark
