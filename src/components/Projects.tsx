@@ -10,7 +10,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: 'EasyRent',
+    name: 'EasyRent Rental Platform',
     description: 'Comprehensive rental management application built with Flutter, enabling landlords and tenants to streamline property management workflows.',
     techStack: ['Flutter', 'Dart', 'Firebase', 'Provider'],
     repo: 'https://github.com/yourusername/easyrents',

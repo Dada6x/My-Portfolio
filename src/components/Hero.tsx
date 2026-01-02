@@ -16,7 +16,9 @@ export function Hero() {
         </div>
 
         <h1 className="text-7xl md:text-8xl font-bold mb-8 text-black dark:text-white animate-slide-up leading-tight tracking-tighter">
-          Software<br />Engineer
+          {/* Software<br />Engineer */}
+                    Yahiea<br />Dada
+
         </h1>
 
         <div className="mb-12 text-lg md:text-xl text-gray-600 dark:text-gray-400 animate-slide-up-delay max-w-2xl leading-relaxed">
@@ -43,7 +45,7 @@ export function Hero() {
         </div>
 
         <div className="mt-16 text-xs font-mono text-gray-500 dark:text-gray-600">
-          ▯ Damascus University • Software Engineer
+           Damascus University • Software Engineer
         </div>
       </div>
     </section>
