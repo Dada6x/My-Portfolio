@@ -1,6 +1,9 @@
 export function About() {
   return (
-    <section id="about" className="relative bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
+    <section
+      id="about"
+      className="relative bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500"
+    >
       <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
       <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
 
@@ -15,18 +18,32 @@ export function About() {
             </h2>
             <div className="space-y-6 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               <p>
-                I'm a <span className="text-black dark:text-white font-semibold">Software Engineer</span> at Damascus University ,
-                passionate about building robust applications and exploring the depths of technology.
+                I'm a{" "}
+                <span className="text-black dark:text-white font-semibold">
+                  Software Engineer
+                </span>{" "}
+                at Damascus University , passionate about building robust
+                applications and exploring the depths of technology.
               </p>
               <p>
-                Beyond my professional work, I'm an indie game developer using Unity,
-                where I bring creative ideas to life through interactive experiences.
+                Beyond my professional work, I'm an indie game developer using
+                Unity, where I bring creative ideas to life through interactive
+                experiences.
               </p>
               <p>
-                My technical interests span across multiple domains, with a particular focus on
-                <span className="text-black dark:text-white font-semibold"> cybersecurity</span> and
-                <span className="text-black dark:text-white font-semibold"> networking</span>.
-                I believe in understanding systems at their core to build better, more secure solutions.
+                My technical interests span across multiple domains, with a
+                particular focus on
+                <span className="text-black dark:text-white font-semibold">
+                  {" "}
+                  cybersecurity
+                </span>{" "}
+                and
+                <span className="text-black dark:text-white font-semibold">
+                  {" "}
+                  networking
+                </span>
+                . I believe in understanding systems at their core to build
+                better, more secure solutions.
               </p>
             </div>
           </div>
@@ -65,8 +82,13 @@ export function About() {
             · knowledge sharing
           </div>
           <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-            I maintain an <span className="text-black dark:text-white font-semibold">Obsidian knowledge base</span> where I document and share
-            everything I learn about software engineering, creating a living library of insights, best practices, and architectural patterns.
+            I maintain an{" "}
+            <span className="text-black dark:text-white font-semibold">
+              Obsidian knowledge base
+            </span>{" "}
+            where I document and share everything I learn about software
+            engineering, creating a living library of insights, best practices,
+            and architectural patterns.
           </p>
         </div>
       </div>
