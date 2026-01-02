@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github } from "lucide-react";
 
 interface Project {
   name: string;
@@ -10,34 +10,41 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: 'EasyRent Rental Platform',
-    description: 'Comprehensive rental management application built with Flutter, enabling landlords and tenants to streamline property management workflows.',
-    techStack: ['Flutter', 'Dart', 'Firebase', 'Provider'],
-    repo: 'https://github.com/yourusername/easyrents',
+    name: "EasyRent Rental Platform",
+    description:
+      "Comprehensive rental management application built with Flutter, enabling landlords and tenants to streamline property management workflows.",
+    techStack: ["Flutter", "Dart", "Firebase", "Provider"],
+    repo: "https://github.com/yourusername/easyrents",
   },
   {
-    name: 'ObsidianPasswordManager',
-    description: 'Secure password manager seamlessly integrated with Obsidian, combining note-taking with encrypted credential storage.',
-    techStack: ['Flutter', 'Encryption', 'Obsidian API', 'SQLite'],
-    repo: 'https://github.com/yourusername/obsidian-password-manager',
+    name: "ObsidianPasswordManager",
+    description:
+      "Secure password manager seamlessly integrated with Obsidian, combining note-taking with encrypted credential storage.",
+    techStack: ["Flutter", "Encryption", "Obsidian API", "SQLite"],
+    repo: "https://github.com/yourusername/obsidian-password-manager",
   },
   {
-    name: 'MonumentalHabits',
-    description: 'Habit tracking and productivity app designed to help users build consistent routines and achieve long-term goals.',
-    techStack: ['Flutter', 'BLoC', 'Local Storage', 'Notifications'],
-    repo: 'https://github.com/yourusername/monumental-habits',
+    name: "MonumentalHabits",
+    description:
+      "Habit tracking and productivity app designed to help users build consistent routines and achieve long-term goals.",
+    techStack: ["Flutter", "BLoC", "Local Storage", "Notifications"],
+    repo: "https://github.com/yourusername/monumental-habits",
   },
   {
-    name: 'EventManagement Backend',
-    description: 'Robust backend system for managing events, users, and scheduling with RESTful APIs and real-time capabilities.',
-    techStack: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
-    repo: 'https://github.com/yourusername/event-management-backend',
+    name: "EventManagement Backend",
+    description:
+      "Robust backend system for managing events, users, and scheduling with RESTful APIs and real-time capabilities.",
+    techStack: ["Node.js", "Express", "PostgreSQL", "JWT"],
+    repo: "https://github.com/yourusername/event-management-backend",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="relative bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
+    <section
+      id="projects"
+      className="relative bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500 "
+    >
       <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
       <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
 
@@ -51,7 +58,8 @@ export function Projects() {
               My Work
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              A collection of projects showcasing mobile development, backend architecture, and scalable systems.
+              A collection of projects showcasing mobile development, backend
+              architecture, and scalable systems.
             </p>
           </div>
 
@@ -63,8 +71,12 @@ export function Projects() {
             <div
               key={index}
               className={`p-8 md:p-12 border-t border-gray-200 dark:border-gray-800 ${
-                index % 2 === 1 ? 'border-l' : ''
-              } ${index % 2 === 1 ? 'md:border-l border-gray-200 dark:border-gray-800' : ''} group hover:bg-gray-50 dark:hover:bg-gray-950 transition-colors duration-200`}
+                index % 2 === 1 ? "border-l" : ""
+              } ${
+                index % 2 === 1
+                  ? "md:border-l border-gray-200 dark:border-gray-800"
+                  : ""
+              } group hover:bg-gray-50 dark:hover:bg-gray-950 transition-colors duration-200`}
             >
               <div className="flex items-start justify-between mb-6">
                 <h3 className="text-xl font-bold text-black dark:text-white">

@@ -8,7 +8,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
+    <section className="relative min-h-screen overflow-hidden bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500 pb-7">
       {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
