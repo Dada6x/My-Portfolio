@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Squares from "./Squares";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -9,15 +10,17 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-colors duration-500 pb-7">
-      {/* Grid background */}
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      {/* ================= Squares Background ================= */}
+      <div className="absolute inset-0 z-0">
+        <Squares squareSize={45} />
+      </div>
 
-      {/* Vertical frame lines */}
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
-      <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
+      {/* ================= Vertical frame lines ================= */}
+      <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 z-10" />
 
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto min-h-screen px-6 md:px-16 flex items-center">
+      {/* ================= Content ================= */}
+      <div className="relative z-10 max-w-7xl mx-auto min-h-screen px-6 md:px-16 flex items-center pointer-events-none">
         <div className="grid grid-cols-12 w-full">
           <div className="col-span-12 md:col-span-9">
             {/* Title */}
@@ -82,6 +85,7 @@ const techs = [
     bg: "bg-red-50 dark:bg-red-950/40",
   },
 ];
+
 function AnimatedTech() {
   const [index, setIndex] = useState(0);
 
@@ -104,8 +108,7 @@ function AnimatedTech() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -8, opacity: 0 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className={`absolute left-0 px-2 py-1 rounded font-mono text-sm
-            ${tech.text} ${tech.bg}`}
+          className={`absolute left-0 px-2 py-1 rounded font-mono text-sm ${tech.text} ${tech.bg}`}
         >
           {tech.name}
         </motion.code>

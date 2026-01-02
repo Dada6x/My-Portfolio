@@ -10,9 +10,9 @@ function App() {
       <ThemeToggle />
       <Hero />
       <Projects />
-      <div className="w-full h-[500px] bg-red-300"></div>
+      <div className="w-full h-[250px] bg-white"></div>
       <About />
-      <div className="w-full h-[500px] bg-black"></div>
+      <div className="w-full h-[250px] bg-white"></div>
       <Contact />
     </div>
   );
