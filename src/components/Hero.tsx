@@ -36,7 +36,7 @@ export function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 pointer-events-auto">
               <button
                 onClick={() => scrollToSection("projects")}
                 className="group px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-mono text-sm hover:bg-gray-900 dark:hover:bg-gray-100 transition-all duration-200 flex items-center gap-2 border border-black dark:border-white"

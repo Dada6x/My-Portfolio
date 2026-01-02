@@ -9,10 +9,11 @@ function App() {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500 ">
       <ThemeToggle />
       <Hero />
+      <div className="w-full h-[250px] bg-white dark:bg-black ransition-colors duration-500 "></div>
       <Projects />
-      <div className="w-full h-[250px] bg-white"></div>
+      <div className="w-full h-[250px] bg-white dark:bg-black ransition-colors duration-500 "></div>
       <About />
-      <div className="w-full h-[250px] bg-white"></div>
+      <div className="w-full h-[250px] bg-white dark:bg-black ransition-colors duration-500 "></div>
       <Contact />
     </div>
   );
