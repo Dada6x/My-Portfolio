@@ -19,3 +19,7 @@ function App() {
 }
 
 export default App;
+
+// edit the colors in the dark
+// make an game dev section  https://reactbits.dev/backgrounds/faulty-terminal
+// make an cybersecurity section https://reactbits.dev/backgrounds/letter-glitch

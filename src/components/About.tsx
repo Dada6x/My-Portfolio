@@ -116,19 +116,21 @@ export function About() {
               />
             </div>
 
-            {/* Text (right on desktop) */}
             <div className="order-2 md:order-2">
               <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
                 · Game Development
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-                I maintain an{" "}
+                I am an{" "}
                 <span className="text-black dark:text-white font-semibold">
-                  Obsidian knowledge base
+                  indie game developer
                 </span>{" "}
-                where I document and share everything I learn about software
-                engineering, creating a living library of insights, best
-                practices, and architectural patterns.
+                working primarily with Unity, where I design and implement
+                gameplay mechanics, player systems, and interactive
+                environments. I enjoy building games from the ground up,
+                focusing on clean architecture, performance, and creating
+                engaging experiences that balance technical depth with creative
+                design.
               </p>
             </div>
           </div>
@@ -136,7 +138,6 @@ export function About() {
         {/* Bytes4Future */}
         <div className="p-8 md:p-12 border-l border-gray-200 dark:border-gray-800 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Text */}
             <div>
               <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
                 · Internship
@@ -154,7 +155,6 @@ export function About() {
                 impact-driven projects.
               </p>
             </div>
-
             <div className="relative">
               <img
                 src="assets/bytes.jpeg"
