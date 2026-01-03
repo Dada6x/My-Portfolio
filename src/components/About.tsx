@@ -4,29 +4,29 @@ import Stack from "./Stack";
 export function About() {
   const obsidianNotes = [
     <img
-      src={"assets/obsidian1.png"}
+      src={"/obsidian1.png"}
       alt="Game 1"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
-      src={"assets/obsidian2.png"}
+      src={"/obsidian2.png"}
       alt="Game 2"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
-      src={"assets/obsidian3.png"}
+      src={"/obsidian3.png"}
       alt="Game 3"
       className="w-full h-full object-cover pointer-events-none"
     />,
   ];
   const gameDev = [
     <img
-      src={"assets/@mini-moss · minimoss.gif"}
+      src={"/@mini-moss · minimoss.gif"}
       alt="Game 1"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
-      src={"assets/game.png"}
+      src={"/game.png"}
       alt="Game 2"
       className="w-full h-full object-cover pointer-events-none"
     />,
@@ -38,17 +38,17 @@ export function About() {
   ];
   const bytes4Future = [
     <img
-      src={"assets/bytes.jpeg"}
+      src={"/bytes.jpeg"}
       alt="Game 1"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
-      src={"assets/bytes2.jpeg"}
+      src={"/bytes2.jpeg"}
       alt="Game 2"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
-      src={"assets/bytes1.jpg"}
+      src={"/bytes1.jpg"}
       alt="Game 3"
       className="w-full h-full object-cover pointer-events-none"
     />,
