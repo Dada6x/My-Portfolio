@@ -57,7 +57,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative bg-white dark:bg-black   border-gray-200 dark:border-gray-800 border-r border-t border-b transition-colors duration-500 "
+      className="relative bg-white dark:bg-black  border-gray-200 dark:border-gray-800 border-r border-t border-b transition-colors duration-500 "
     >
       <ClickSpark
         sparkSize={10}
@@ -110,28 +110,18 @@ export function About() {
             </div>
 
             <div className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-800">
-              <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
+              <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
                 · passions & interests
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-mono text-xs text-black dark:text-white mb-2 tracking-wider">
+                  <h3 className="font-mono text-xl text-black dark:text-white mb-2 tracking-wider">
                     Technical Focus
                   </h3>
                   <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                    <li>• Cybersecurity & ethical hacking</li>
+                    <li>• Cybersecurity</li>
                     <li>• Network architecture & protocols</li>
                     <li>• Indie game development (Unity)</li>
-                  </ul>
-                </div>
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
-                  <h3 className="font-mono text-xs text-black dark:text-white mb-2 tracking-wider">
-                    Beyond Code
-                  </h3>
-                  <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                    <li>• Regular gym training</li>
-                    <li>• Extensive reading</li>
-                    <li>• Obsidian knowledge base</li>
                   </ul>
                 </div>
               </div>
@@ -143,10 +133,10 @@ export function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Text */}
               <div>
-                <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
+                <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
                   · knowledge sharing
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-[16px]">
                   I maintain an{" "}
                   <span className="text-black dark:text-white font-semibold">
                     Obsidian knowledge base
@@ -184,12 +174,12 @@ export function About() {
               </div>
 
               <div className="order-2 md:order-2">
-                <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
+                <div className="text-lg  font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
                   · Game Development
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-[16px]">
                   I am an{" "}
-                  <span className="text-black dark:text-white font-semibold">
+                  <span className="text-black dark:text-white font-semibold text-[16px]">
                     indie game developer
                   </span>{" "}
                   working primarily with Unity, where I design and implement
@@ -206,10 +196,10 @@ export function About() {
           <div className="p-8 md:p-12 border-l border-gray-200 dark:border-gray-800 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
+                <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
                   · Internship
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-[16px]">
                   I participated in the{" "}
                   <span className="text-black dark:text-white font-semibold">
                     Bytes4Future program

@@ -46,10 +46,17 @@ export function Hero() {
               </button>
 
               <button
-                onClick={() => scrollToSection("contact")}
                 className="px-6 py-3 bg-white dark:bg-black text-black dark:text-white font-mono text-sm border border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-all duration-200"
-              >
-                contact me
+                >
+                <a
+                  href={
+                    "https://github.com/Dada6x/Dada6x/blob/main/CV/Yahea%20Dada%20Cv.pdf"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  My Resume
+                </a>
               </button>
             </div>
 
