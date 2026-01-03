@@ -5,29 +5,17 @@ import { Contact } from "./components/Contact";
 import { Navbar } from "./components/NavBar";
 import ClickSpark from "./components/ClickSpark";
 import LogoLoop from "./components/LogoLoop";
+import { skills } from "./data/skills";
 
 function App() {
-  // Alternative with image sources
-  const imageLogos = [
-    {
-      src: "/logos/company1.png",
-      alt: "Company 1",
-      href: "https://company1.com",
-    },
-    {
-      src: "/logos/company2.png",
-      alt: "Company 2",
-      href: "https://company2.com",
-    },
-    {
-      src: "/logos/company3.png",
-      alt: "Company 3",
-      href: "https://company3.com",
-    },
-  ];
+  const imageLogos = skills.map((skill) => ({
+    src: skill.src,
+    alt: skill.name,
+    href: `https://www.google.com/search?q=${encodeURIComponent(skill.name)}`,
+  }));
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
+    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-500">
       <ClickSpark
         sparkSize={10}
         sparkRadius={20}
@@ -36,25 +24,23 @@ function App() {
       >
         <Navbar />
         <Hero />
+        <div className="w-full h-[250px] bg-white dark:bg-black transition-colors duration-500" />
         <Projects />
-        <div className="w-full h-[250px] bg-white dark:bg-black duration-500 "></div>
+        <div className="w-full h-[250px] bg-white dark:bg-black transition-colors duration-500" />
         <About />
-        <div
-          style={{ height: "200px", position: "relative", overflow: "hidden" }}
-        >
+        <div className="mx-auto max-w-7xl h-[200px] flex items-center justify-center bg-white dark:bg-black transition-colors duration-500">
           <LogoLoop
             logos={imageLogos}
             speed={120}
             direction="left"
-            logoHeight={48}
+            logoHeight={70}
             gap={40}
             hoverSpeed={0}
             scaleOnHover
             fadeOut
-            fadeOutColor="#ffffff"
-            ariaLabel="Technology partners"
+            ariaLabel="Skills & technologies"
           />
-        </div>{" "}
+        </div>
         <Contact />
       </ClickSpark>
     </div>
