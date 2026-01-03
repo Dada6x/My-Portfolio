@@ -39,7 +39,7 @@ export function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 ">
             <div className="p-8 md:p-12 border-r border-gray-200 dark:border-gray-800">
               <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
-                · 03 / contact
+                · 04 / contact
               </div>
               <h2 className="text-4xl font-bold text-black dark:text-white mb-8">
                 Get In Touch

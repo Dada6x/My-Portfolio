@@ -9,10 +9,10 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white  dark:bg-black transition-colors duration-500 pb-7 border-r border-black">
+    <section className="relative max-h-screen overflow-hidden bg-white  dark:bg-black transition-colors duration-500 mb-1 border-r border-black ">
       {/* ================= Squares Background ================= */}
       <div className="absolute inset-0 z-0">
-        <Squares squareSize={64} />
+        <Squares squareSize={50} />
       </div>
 
       {/* ================= Vertical frame lines ================= */}

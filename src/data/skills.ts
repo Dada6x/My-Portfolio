@@ -100,11 +100,6 @@ export const skills = [
     color: "#EA2D2E",
   },
   {
-    name: "C++",
-    src: "https://skillicons.dev/icons?i=cpp",
-    color: "#00599C",
-  },
-  {
     name: "C#",
     src: "https://skillicons.dev/icons?i=cs",
     color: "#9B4F96",
