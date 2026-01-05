@@ -28,11 +28,10 @@ export function Hero() {
               Yahiea Dada
             </h1>
 
-            {/* Description */}
             <p className="mb-12 text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
-              Building robust mobile applications with <AnimatedTech />,{" "}
-              designing backend systems, and exploring cybersecurity and
-              networking architecture.
+              Building cross-platform applications with <AnimatedTech />,
+              developing backend features, and focusing on writing clean,
+              maintainable software.
             </p>
 
             {/* Buttons */}
@@ -45,9 +44,7 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button
-                className="px-6 py-3 bg-white dark:bg-black text-black dark:text-white font-mono text-sm border border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-all duration-200"
-                >
+              <button className="px-6 py-3 bg-white dark:bg-black text-black dark:text-white font-mono text-sm border border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-all duration-200">
                 <a
                   href={
                     "https://github.com/Dada6x/Dada6x/blob/main/CV/Yahea%20Dada%20Cv.pdf"

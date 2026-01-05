@@ -156,7 +156,7 @@ export function About() {
               </div>
               {/* Stack of images */}
               <div className="relative">
-                <div style={{ width: 520, height: 280 }}>
+                <div className="w-full max-w-[520px] aspect-[520/280]">
                   <Stack
                     cards={obsidianNotes}
                     randomRotation
@@ -172,7 +172,8 @@ export function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* IMAGE */}
               <div className="relative order-2 md:order-1">
-                <div style={{ width: 520, height: 280 }}>
+                v
+                <div className="w-full max-w-[520px] aspect-[520/280]">
                   <Stack
                     cards={gameDev}
                     randomRotation
@@ -224,7 +225,7 @@ export function About() {
                 </p>
               </div>
               <div className="relative">
-                <div style={{ width: 520, height: 280 }}>
+                <div className="w-full max-w-[520px] aspect-[520/280]">
                   <Stack
                     cards={bytes4Future}
                     randomRotation
