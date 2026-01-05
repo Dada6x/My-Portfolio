@@ -50,11 +50,6 @@ export const skills = [
     color: "#61DAFB",
   },
   {
-    name: "GSAP",
-    src: "https://go-skill-icons.vercel.app/api/icons?i=gsap",
-    color: "#1df04b",
-  },
-  {
     name: "React",
     src: "https://skillicons.dev/icons?i=react",
     color: "#61DAFB",
@@ -149,11 +144,7 @@ export const skills = [
     src: "https://skillicons.dev/icons?i=ubuntu",
     color: "#E95420",
   },
-  {
-    name: "Windows",
-    src: "https://skillicons.dev/icons?i=windows",
-    color: "#00adef",
-  },
+
   {
     name: "Zustand",
     src: "https://go-skill-icons.vercel.app/api/icons?i=zustand",

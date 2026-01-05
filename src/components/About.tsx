@@ -1,7 +1,9 @@
 import ClickSpark from "./ClickSpark";
 import Stack from "./Stack";
+import { useTheme } from "../contexts/ThemeContext";
 
 export function About() {
+  const { theme } = useTheme();
   const obsidianNotes = [
     <img
       src={"/obsidian1.png"}
@@ -31,7 +33,7 @@ export function About() {
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
-      src={"https://obsidian.md/images/publish-example-dark.png"}
+      src={"/game2.jpg"}
       alt="Game 3"
       className="w-full h-full object-cover pointer-events-none"
     />,
@@ -108,23 +110,29 @@ export function About() {
                 </p>
               </div>
             </div>
-
-            <div className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-800">
-              <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
-                · passions & interests
+            <div className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-800 ">
+              <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider ">
+                · my github contributions
               </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-mono text-xl text-black dark:text-white mb-2 tracking-wider">
-                    Technical Focus
-                  </h3>
-                  <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                    <li>• Cybersecurity</li>
-                    <li>• Network architecture & protocols</li>
-                    <li>• Indie game development (Unity)</li>
-                  </ul>
+              <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
+                  <img
+                    alt="github-snake"
+                    src={
+                      theme === "dark"
+                        ? "https://raw.githubusercontent.com/Dada6x/Dada6x/output/github-snake-dark.svg"
+                        : "https://raw.githubusercontent.com/Dada6x/Dada6x/output/github-snake.svg"
+                    }
+                    className="max-w-full h-auto transition-opacity duration-300"
+                  />
                 </div>
               </div>
+              <ul className="text-sm font-mono text-gray-500 dark:text-gray-600 tracking-wider space-y-2 mt-6">
+                <li>• currently learning nest.js and backend architecture</li>
+                <li>
+                  • interested in networking, protocols, and cybersecurity
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -148,7 +156,7 @@ export function About() {
               </div>
               {/* Stack of images */}
               <div className="relative">
-                <div style={{ width: 600, height: 300 }}>
+                <div style={{ width: 520, height: 280 }}>
                   <Stack
                     cards={obsidianNotes}
                     randomRotation
@@ -160,9 +168,10 @@ export function About() {
             </div>
           </div>
           {/*! GAME DEVELOPMENT  SECTION */}
-          <div className="p-8 md:p-12 border-r border-gray-200 dark:border-gray-800 border-t border-b ">
+          <div className="p-8 md:p-12 border-r border-gray-200 dark:border-gray-800 border-t border-b">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="relative order-1 md:order-1">
+              {/* IMAGE */}
+              <div className="relative order-2 md:order-1">
                 <div style={{ width: 520, height: 280 }}>
                   <Stack
                     cards={gameDev}
@@ -173,13 +182,14 @@ export function About() {
                 </div>
               </div>
 
-              <div className="order-2 md:order-2">
-                <div className="text-lg  font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
+              {/* TEXT */}
+              <div className="order-1 md:order-2">
+                <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
                   · Game Development
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-[16px]">
                   I am an{" "}
-                  <span className="text-black dark:text-white font-semibold text-[16px]">
+                  <span className="text-black dark:text-white font-semibold">
                     indie game developer
                   </span>{" "}
                   working primarily with Unity, where I design and implement
@@ -192,6 +202,7 @@ export function About() {
               </div>
             </div>
           </div>
+
           {/* Bytes4Future */}
           <div className="p-8 md:p-12 border-l border-gray-200 dark:border-gray-800 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

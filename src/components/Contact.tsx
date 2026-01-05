@@ -51,7 +51,7 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:yahieadada@gmai;.com"
                   className="block p-4 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-950 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -61,7 +61,7 @@ export function Contact() {
                     </span>
                   </div>
                   <div className="text-sm text-black dark:text-white font-semibold">
-                    your.email@example.com
+                    yahieadada@gmail.com
                   </div>
                 </a>
 
