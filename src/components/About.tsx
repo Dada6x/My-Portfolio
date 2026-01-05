@@ -49,11 +49,6 @@ export function About() {
       alt="Game 2"
       className="w-full h-full object-cover pointer-events-none"
     />,
-    <img
-      src={"/bytes1.jpg"}
-      alt="Game 3"
-      className="w-full h-full object-cover pointer-events-none"
-    />,
   ];
 
   return (
