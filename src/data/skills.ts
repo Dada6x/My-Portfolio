@@ -45,11 +45,6 @@ export const skills = [
     color: "#FFFFFF",
   },
   {
-    name: "React Native",
-    src: "https://skillicons.dev/icons?i=react",
-    color: "#61DAFB",
-  },
-  {
     name: "React",
     src: "https://skillicons.dev/icons?i=react",
     color: "#61DAFB",
