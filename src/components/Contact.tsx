@@ -1,6 +1,9 @@
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { useState, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import ClickSpark from "./ClickSpark";
+
+type Status = "idle" | "sending" | "sent" | "error";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -8,17 +11,42 @@ export function Contact() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+
+  const [status, setStatus] = useState<Status>("idle");
+
+  // EmailJS environment variables
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
   const handleSubmit = async (e: FormEvent) => {
+    console.log(SERVICE_ID);
+    
     e.preventDefault();
     setStatus("sending");
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        PUBLIC_KEY
+      );
 
-    setStatus("sent");
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setStatus("idle"), 3000);
+      setStatus("sent");
+      setFormData({ name: "", email: "", message: "" });
+
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
 
   return (
@@ -26,17 +54,13 @@ export function Contact() {
       id="contact"
       className="relative bg-white dark:bg-black transition-colors duration-500 border-gray-200 dark:border-gray-800 border-t"
     >
-      <ClickSpark
-        sparkSize={10}
-        sparkRadius={20}
-        sparkCount={10}
-        duration={400}
-      >
+      <ClickSpark sparkSize={10} sparkRadius={20} sparkCount={10} duration={400}>
         <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
         <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
 
         <div className="max-w-7xl mx-auto border-gray-200 dark:border-gray-800 border-l border-r">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            {/* LEFT */}
             <div className="p-8 md:p-12 border-r border-gray-200 dark:border-gray-800">
               <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
                 · 04 / contact
@@ -51,7 +75,7 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:yahieadada@gmai;.com"
+                  href="mailto:yahieadada@gmail.com"
                   className="block p-4 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-950 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -101,93 +125,70 @@ export function Contact() {
               </div>
             </div>
 
+            {/* RIGHT */}
             <div className="p-8 md:p-12">
               <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
                 · send a message
               </div>
+
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-xs font-mono text-gray-500 dark:text-gray-600 mb-2 tracking-wider"
-                  >
-                    NAME
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    required
-                    className="w-full px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-black dark:text-white text-sm focus:outline-none hover:border-gray-400 dark:hover:border-gray-600 transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  required
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  className="w-full px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-sm"
+                />
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-xs font-mono text-gray-500 dark:text-gray-600 mb-2 tracking-wider"
-                  >
-                    EMAIL
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    required
-                    className="w-full px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-black dark:text-white text-sm focus:outline-none hover:border-gray-400 dark:hover:border-gray-600 transition-colors"
-                    placeholder="youremail@gmail.com"
-                  />
-                </div>
+                <input
+                  type="email"
+                  placeholder="youremail@gmail.com"
+                  required
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  className="w-full px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-sm"
+                />
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-xs font-mono text-gray-500 dark:text-gray-600 mb-2 tracking-wider"
-                  >
-                    MESSAGE
-                  </label>
-                  <textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    required
-                    rows={4}
-                    className="w-full px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-black dark:text-white text-sm focus:outline-none hover:border-gray-400 dark:hover:border-gray-600 transition-colors resize-none"
-                    placeholder="Your message..."
-                  />
-                </div>
+                <textarea
+                  rows={4}
+                  placeholder="Your message..."
+                  required
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                  className="w-full px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-sm resize-none"
+                />
 
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full px-4 py-3 bg-black dark:bg-white text-white dark:text-black font-mono text-sm border border-black dark:border-white hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 bg-black dark:bg-white text-white dark:text-black font-mono text-sm flex items-center justify-center gap-2 disabled:opacity-50"
                 >
-                  {status === "sending" ? (
-                    "sending..."
-                  ) : status === "sent" ? (
-                    "sent!"
-                  ) : (
-                    <>
-                      send message
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
+                  {status === "sending"
+                    ? "sending..."
+                    : status === "sent"
+                    ? "sent!"
+                    : status === "error"
+                    ? "failed"
+                    : (
+                      <>
+                        send message <Send className="w-4 h-4" />
+                      </>
+                    )}
                 </button>
               </form>
             </div>
           </div>
         </div>
+
         <div className="p-8 md:p-12 text-center border-t border-gray-200 dark:border-gray-800">
-          <p className="font-mono text-xs text-gray-500 dark:text-gray-600 tracking-wider">
+          <p className="font-mono text-xs text-gray-500 dark:text-gray-600">
             built with React, TypeScript & Tailwind CSS
           </p>
           <p className="mt-4 font-mono text-xs text-gray-500 dark:text-gray-600">

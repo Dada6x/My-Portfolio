@@ -211,12 +211,21 @@ export function About() {
                   <span className="text-black dark:text-white font-semibold">
                     Bytes4Future program
                   </span>{" "}
-                  by the Aga Khan Foundation, an intensive internship focused on
-                  building real-world software engineering skills. The program
-                  emphasized practical development, problem-solving, teamwork,
-                  and modern engineering practices, helping me strengthen my
-                  foundation in software development while working on
-                  meaningful, impact-driven projects.
+                  by the{" "}
+                  <a
+                    href="https://akf.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-white font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+                  >
+                    Aga Khan Foundation
+                  </a>
+                   , an intensive internship focused on building real-world
+                  software engineering skills. The program emphasized practical
+                  development, problem-solving, teamwork, and modern engineering
+                  practices, helping me strengthen my foundation in software
+                  development while working on meaningful, impact-driven
+                  projects.
                 </p>
               </div>
               <div className="relative">
