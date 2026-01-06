@@ -105,7 +105,7 @@ export function About() {
                 </p>
               </div>
             </div>
-            <div className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-800 ">
+            {/* <div className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-800 ">
               <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider ">
                 · my github contributions
               </div>
@@ -128,7 +128,7 @@ export function About() {
                   • interested in networking, protocols, and cybersecurity
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Obsidian knowledge */}
@@ -167,7 +167,6 @@ export function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* IMAGE */}
               <div className="relative order-2 md:order-1">
-                v
                 <div className="w-full max-w-[520px] aspect-[520/280]">
                   <Stack
                     cards={gameDev}
@@ -220,7 +219,7 @@ export function About() {
                   >
                     Aga Khan Foundation
                   </a>
-                   , an intensive internship focused on building real-world
+                  , an intensive internship focused on building real-world
                   software engineering skills. The program emphasized practical
                   development, problem-solving, teamwork, and modern engineering
                   practices, helping me strengthen my foundation in software

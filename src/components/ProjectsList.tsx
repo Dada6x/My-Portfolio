@@ -19,11 +19,10 @@ const projects: Project[] = [
       "Comprehensive rental management application built with Flutter, enabling landlords and tenants to streamline property management workflows.",
     techStack: [
       "Flutter",
-      "Dart",
-      "Firebase",
       "GetX",
       "Stripe",
       " 360° panoramic views",
+      "Map View",
     ],
     repo: "https://github.com/dada6x/easyrent-Rental-Platform",
     image: "/easyRent.png",
@@ -51,8 +50,8 @@ const projects: Project[] = [
   {
     name: "CheckMate",
     description:
-      "Robust backend system for managing events, users, and scheduling with RESTful APIs and real-time capabilities.",
-    techStack: ["Supabase", "Flutter", "Dart", "JWT"],
+      "A real-time multiplayer chess game built with Flutter, Supabase, and the Bishop Chess Engine, featuring smooth animations, elegant UI, and real-time board synchronization using FEN. Each player has a distinct name, displayed during online matches.",
+    techStack: ["Flutter", "GetX", "Bishop Engine", "Supabase"],
     repo: "https://github.com/Dada6x/MultiPlayer-Chess-Game",
     image: "/checkmate.png",
     accentColor: "#1a1b2f",
@@ -62,7 +61,7 @@ const projects: Project[] = [
     name: "Event Management Backend",
     description:
       "Robust backend system for managing events, users, and scheduling with RESTful APIs and real-time capabilities.",
-    techStack: ["Node.js", "Express", "PostgreSQL", "JWT", "Swagger"],
+    techStack: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
     repo: "https://github.com/yourusername/event-management-backend",
     image: "",
     accentColor: "#ffcc66",

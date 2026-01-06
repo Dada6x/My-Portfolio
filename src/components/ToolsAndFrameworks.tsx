@@ -11,8 +11,8 @@ export function ToolsAndFrameworks({ logos }: ToolsAndFrameworksProps) {
       className="mx-auto max-w-7xl  border-gray-200 dark:border-gray-800 border-l border-r"
     >
       {/* Heading */}
-      <div className="pl-8 md:p-12 text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
-        ·  03 / Tools & frameworks I use
+      <div className="p-8 md:p-12 text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
+        · 03 / Tools & frameworks I use
       </div>
 
       <div className="h-[200px] flex items-center justify-center bg-white dark:bg-black transition-colors duration-500">
