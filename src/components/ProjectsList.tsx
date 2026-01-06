@@ -40,15 +40,6 @@ const projects: Project[] = [
     accentColor: "#0061ff",
     liveDemo: "https://easyrent-rental-platform.vercel.app",
   },
-  // {
-  //   name: "ObsidianPasswordManager",
-  //   description:
-  //     "Secure password manager seamlessly integrated with Obsidian, combining note-taking with encrypted credential storage.",
-  //   techStack: ["Flutter", "Encryption", "Obsidian API", "SQLite"],
-  //   repo: "https://github.com/yourusername/obsidian-password-manager",
-  //   image: "",
-  //   accentColor: "#ffcc66",
-  // },
   {
     name: "MonumentalHabits",
     description:
@@ -71,15 +62,15 @@ const projects: Project[] = [
   {
     name: "CheckMate",
     description:
-      "A real-time multiplayer chess game built with Flutter, Supabase, and the Bishop Chess Engine, featuring smooth animations, elegant UI, and real-time board synchronization using FEN. Each player has a distinct name, displayed during online matches.",
+      "A real-time multiplayer chess dish built with Flutter, Supabase, and the Bishop Chess Engine, featuring smooth animations, elegant UI, and real-time board synchronization using FEN. Each player has a distinct name, displayed during online matches.",
     details:
-      "Real-time multiplayer chess game with online matchmaking, FEN-based board synchronization, smooth piece animations, and an elegant UI. Built with Flutter and Supabase for real-time functionality.",
+      "Supports local multiplayer, AI matches, and online real-time play with full FEN-based state sync. Includes dynamic theming (light/dark mode), move sound effects, win confetti animations, and offline support. Built using a modular architecture with GetX for state management and Supabase for scalable backend services.",
     techStack: ["Flutter", "GetX", "Bishop Engine", "Supabase"],
-    repo: "https://github.com/Dada6x/MultiPlayer-Chess-Game",
+    repo: "https://github.com/Dada6x/MultiPlayer-Chess-Game  ",
     image: "/checkmate.png",
     screenshots: ["/checkmate1.jpg", "/checkmate2.jpg", "/checkmate3.jpg"],
     accentColor: "#1a1b2f",
-    liveDemo: "https://multi-player-chess-game-qzty.vercel.app",
+    liveDemo: "https://multi-player-chess-game-qzty.vercel.app  ",
   },
   {
     name: "Event Management Backend",
@@ -89,6 +80,7 @@ const projects: Project[] = [
     repo: "https://github.com/yourusername/event-management-backend",
     image: "",
     accentColor: "#ffcc66",
+    screenshots: ["/swagger.png", "/MongoDB.png"],
   },
 ];
 

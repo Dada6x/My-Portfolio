@@ -27,11 +27,15 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
       onClick={handleOverlayClick}
     >
       <div
-        className={`bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ${isVisible ? "scale-100" : "scale-95"}`}
+        className={`bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ${
+          isVisible ? "scale-100" : "scale-95"
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -44,7 +48,9 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
 
         {/* Project Header */}
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-black dark:text-white mb-2">{project.name}</h2>
+          <h2 className="text-3xl font-bold text-black dark:text-white mb-2">
+            {project.name}
+          </h2>
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
               <span
@@ -74,10 +80,15 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
             {/* Screenshots Section */}
             {project.screenshots && project.screenshots.length > 0 && (
               <div>
-                <h3 className="text-xl font-semibold text-black dark:text-white mb-4">Screenshots</h3>
+                <h3 className="text-xl font-semibold text-black dark:text-white mb-4">
+                  Screenshots
+                </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {project.screenshots.map((screenshot, index) => (
-                    <div key={index} className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800">
+                    <div
+                      key={index}
+                      className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800"
+                    >
                       <img
                         src={screenshot}
                         alt={`${project.name} screenshot ${index + 1}`}
@@ -94,7 +105,9 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
           <div className="space-y-6">
             {/* Project Details */}
             <div>
-              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">Project Details</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">
+                Project Details
+              </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
                 {project.details || project.description}
               </p>
@@ -103,7 +116,9 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
               <div className="space-y-4">
                 {project.repo && (
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-600 dark:text-gray-400 text-sm">GitHub Repository:</span>
+                    <span className="text-gray-600 dark:text-gray-400 text-sm">
+                      GitHub Repository:
+                    </span>
                     <a
                       href={project.repo}
                       target="_blank"
@@ -117,7 +132,9 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
 
                 {project.liveDemo && (
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-600 dark:text-gray-400 text-sm">Live Demo:</span>
+                    <span className="text-gray-600 dark:text-gray-400 text-sm">
+                      Live Demo:
+                    </span>
                     <a
                       href={project.liveDemo}
                       target="_blank"
@@ -133,7 +150,9 @@ export function ProjectDetails({ project, onClose }: ProjectDetailsProps) {
 
             {/* Full Description */}
             <div>
-              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">Description</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">
+                Description
+              </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {project.description}
               </p>
