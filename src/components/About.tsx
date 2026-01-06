@@ -1,9 +1,7 @@
 import ClickSpark from "./ClickSpark";
 import Stack from "./Stack";
-import { useTheme } from "../contexts/ThemeContext";
 
 export function About() {
-  const { theme } = useTheme();
   const obsidianNotes = [
     <img
       src={"/obsidian1.png"}
@@ -105,30 +103,6 @@ export function About() {
                 </p>
               </div>
             </div>
-            {/* <div className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-800 ">
-              <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider ">
-                · my github contributions
-              </div>
-              <div className="flex justify-center items-center">
-                <div className="flex justify-center items-center">
-                  <img
-                    alt="github-snake"
-                    src={
-                      theme === "dark"
-                        ? "https://raw.githubusercontent.com/Dada6x/Dada6x/output/github-snake-dark.svg"
-                        : "https://raw.githubusercontent.com/Dada6x/Dada6x/output/github-snake.svg"
-                    }
-                    className="max-w-full h-auto transition-opacity duration-300"
-                  />
-                </div>
-              </div>
-              <ul className="text-sm font-mono text-gray-500 dark:text-gray-600 tracking-wider space-y-2 mt-6">
-                <li>• currently learning nest.js and backend architecture</li>
-                <li>
-                  • interested in networking, protocols, and cybersecurity
-                </li>
-              </ul>
-            </div> */}
           </div>
 
           {/* Obsidian knowledge */}
