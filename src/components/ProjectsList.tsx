@@ -4,11 +4,13 @@ import { ProjectCard } from "./ProjectsCard";
 export interface Project {
   name: string;
   description: string;
+  details?: string;
   techStack: string[];
   link?: string;
   repo?: string;
   liveDemo?: string;
   image: string;
+  screenshots?: string[];
   accentColor: string;
 }
 
@@ -17,6 +19,8 @@ const projects: Project[] = [
     name: "EasyRent Rental Platform",
     description:
       "Comprehensive rental management application built with Flutter, enabling landlords and tenants to streamline property management workflows.",
+    details:
+      "A full-featured rental platform with property listings, tenant management, payment processing via Stripe, and interactive property views including 360° panoramic tours and map integration. Built with Flutter for cross-platform compatibility.",
     techStack: [
       "Flutter",
       "GetX",
@@ -26,6 +30,13 @@ const projects: Project[] = [
     ],
     repo: "https://github.com/dada6x/easyrent-Rental-Platform",
     image: "/easyRent.png",
+    screenshots: [
+      "/easyrent5.png",
+      "/easyrent2.png",
+      "/easyrent3.jpg",
+      "/easyrent4.jpg",
+      "/easyrent1.png",
+    ],
     accentColor: "#0061ff",
     liveDemo: "https://easyrent-rental-platform.vercel.app",
   },
@@ -42,18 +53,31 @@ const projects: Project[] = [
     name: "MonumentalHabits",
     description:
       "Habit tracking and productivity app designed to help users build consistent routines and achieve long-term goals.",
+    details:
+      "A comprehensive habit tracker with daily, weekly, and monthly progress tracking, streak counters, motivational notifications, and detailed analytics to help users build and maintain positive habits.",
     techStack: ["Flutter", "GetX", "Local Storage", "Notifications"],
     repo: "https://github.com/Dada6x/Monumental-habits/",
     image: "/Habitly.png",
+    screenshots: [
+      "/habilty4.png",
+      "/habitly2.png",
+      "habitly3.png",
+      "habilty5.png",
+      "/habitly1.png",
+      "habitly6.png",
+    ],
     accentColor: "#ffffff",
   },
   {
     name: "CheckMate",
     description:
       "A real-time multiplayer chess game built with Flutter, Supabase, and the Bishop Chess Engine, featuring smooth animations, elegant UI, and real-time board synchronization using FEN. Each player has a distinct name, displayed during online matches.",
+    details:
+      "Real-time multiplayer chess game with online matchmaking, FEN-based board synchronization, smooth piece animations, and an elegant UI. Built with Flutter and Supabase for real-time functionality.",
     techStack: ["Flutter", "GetX", "Bishop Engine", "Supabase"],
     repo: "https://github.com/Dada6x/MultiPlayer-Chess-Game",
     image: "/checkmate.png",
+    screenshots: ["/checkmate1.jpg", "/checkmate2.jpg", "/checkmate3.jpg"],
     accentColor: "#1a1b2f",
     liveDemo: "https://multi-player-chess-game-qzty.vercel.app",
   },

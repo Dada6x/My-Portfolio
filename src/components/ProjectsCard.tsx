@@ -1,5 +1,7 @@
+import { useState } from "react";
 import ClickSpark from "./ClickSpark";
 import { Project } from "./ProjectsList";
+import { ProjectDetails } from "./ProjectDetails";
 
 interface ProjectCardProps {
   project: Project;
@@ -7,7 +9,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
-  return (
+  const [showDetails, setShowDetails] = useState(false);
+
+  const cardContent = (
     <ClickSpark sparkSize={10} sparkRadius={20} sparkCount={10} duration={400}>
       <div
         className={`p-8 md:p-12 border-t border-gray-200 dark:border-gray-800 group 
@@ -73,17 +77,28 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </a>
           )}
           {
-            <a
-              href={project.liveDemo}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setShowDetails(true)}
               className="px-6 py-3 bg-white dark:bg-black text-black dark:text-white font-mono text-sm border border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-all duration-200"
             >
               Project Details
-            </a>
+            </button>
           }
         </div>
       </div>
     </ClickSpark>
+  );
+
+  return (
+    <>
+      {cardContent}
+      {/* Project Details Modal */}
+      {showDetails && (
+        <ProjectDetails 
+          project={project} 
+          onClose={() => setShowDetails(false)}
+        />
+      )}
+    </>
   );
 }
