@@ -8,6 +8,7 @@ import { skills } from "./data/skills";
 import { ToolsAndFrameworks } from "./components/ToolsAndFrameworks";
 import { Route, Routes } from "react-router-dom";
 import { Lab } from "./components/Lab";
+import CertificationsPage from "./components/certi";
 
 function App() {
   const imageLogos = skills.map((skill) => ({
@@ -43,6 +44,7 @@ function App() {
 
           {/* Lab Page */}
           <Route path="/lab" element={<Lab />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
         </Routes>
       </ClickSpark>
     </div>

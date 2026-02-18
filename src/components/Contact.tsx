@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import ClickSpark from "./ClickSpark";
+import FooterSection from "./footer";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -21,7 +22,7 @@ export function Contact() {
 
   const handleSubmit = async (e: FormEvent) => {
     console.log(SERVICE_ID);
-    
+
     e.preventDefault();
     setStatus("sending");
 
@@ -34,7 +35,7 @@ export function Contact() {
           email: formData.email,
           message: formData.message,
         },
-        PUBLIC_KEY
+        PUBLIC_KEY,
       );
 
       setStatus("sent");
@@ -54,7 +55,12 @@ export function Contact() {
       id="contact"
       className="relative bg-white dark:bg-black transition-colors duration-500 border-gray-200 dark:border-gray-800 border-t"
     >
-      <ClickSpark sparkSize={10} sparkRadius={20} sparkCount={10} duration={400}>
+      <ClickSpark
+        sparkSize={10}
+        sparkRadius={20}
+        sparkCount={10}
+        duration={400}
+      >
         <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
         <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
 
@@ -170,31 +176,24 @@ export function Contact() {
                   disabled={status === "sending"}
                   className="w-full px-4 py-3 bg-black dark:bg-white text-white dark:text-black font-mono text-sm flex items-center justify-center gap-2 disabled:opacity-50"
                 >
-                  {status === "sending"
-                    ? "sending..."
-                    : status === "sent"
-                    ? "sent!"
-                    : status === "error"
-                    ? "failed"
-                    : (
-                      <>
-                        send message <Send className="w-4 h-4" />
-                      </>
-                    )}
+                  {status === "sending" ? (
+                    "sending..."
+                  ) : status === "sent" ? (
+                    "sent!"
+                  ) : status === "error" ? (
+                    "failed"
+                  ) : (
+                    <>
+                      send message <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
           </div>
         </div>
 
-        <div className="p-8 md:p-12 text-center border-t border-gray-200 dark:border-gray-800">
-          <p className="font-mono text-xs text-gray-500 dark:text-gray-600">
-            built with React, TypeScript & Tailwind CSS
-          </p>
-          <p className="mt-4 font-mono text-xs text-gray-500 dark:text-gray-600">
-            © {new Date().getFullYear()} — Yahiea Dada
-          </p>
-        </div>
+        <FooterSection />
       </ClickSpark>
     </section>
   );

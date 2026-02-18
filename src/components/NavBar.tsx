@@ -3,6 +3,7 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import ClickSpark from "./ClickSpark";
+import CertificationsPage from './certi';
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -11,7 +12,9 @@ export function Navbar() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-black/80 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800
+             bg-white/80 dark:bg-black/80 backdrop-blur
+             transition-colors duration-500">
       <ClickSpark
         sparkSize={10}
         sparkRadius={20}
@@ -36,6 +39,13 @@ export function Navbar() {
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               Lab
+            </Link>
+            {/* CERTIFICATIONS */}
+            <Link
+              to="/certifications"
+              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
+            >
+              Certifications
             </Link>
 
             <a
