@@ -41,7 +41,7 @@ const projects: Project[] = [
     liveDemo: "https://easyrent-rental-platform.vercel.app",
   },
   {
-    name: "MonumentalHabits",
+    name: "Monumental Habits",
     description:
       "Habit tracking and productivity app designed to help users build consistent routines and achieve long-term goals.",
     details:
@@ -60,7 +60,7 @@ const projects: Project[] = [
     accentColor: "#ffffff",
   },
   {
-    name: "CheckMate",
+    name: "Check Mate",
     description:
       "A real-time multiplayer chess dish built with Flutter, Supabase, and the Bishop Chess Engine, featuring smooth animations, elegant UI, and real-time board synchronization using FEN. Each player has a distinct name, displayed during online matches.",
     details:
@@ -73,7 +73,7 @@ const projects: Project[] = [
     liveDemo: "https://multi-player-chess-game-qzty.vercel.app  ",
   },
   {
-    name: "Event Management Backend",
+    name: "Event Management (Backend)",
     description:
       "Robust backend system for managing events, users, and scheduling with RESTful APIs and real-time capabilities.",
     techStack: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],

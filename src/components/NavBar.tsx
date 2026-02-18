@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import ClickSpark from "./ClickSpark";
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-black/80 backdrop-blur">
@@ -16,33 +19,41 @@ export function Navbar() {
         duration={400}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-16 h-16 flex items-center justify-between">
-          <div className="font-bold text-black dark:text-white">
+          
+          {/* Logo / Name */}
+          <Link
+            to="/"
+            className="font-bold text-black dark:text-white"
+            onClick={closeMenu}
+          >
             Yahiea Dada
-          </div>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 text-sm">
-            <a
-              href="/Lab"
+            <Link
+              to="/lab"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               Lab
-            </a>
+            </Link>
 
             <a
-              href="#projects"
+              href="/#projects"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               Projects
             </a>
+
             <a
-              href="#about"
+              href="/#about"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               About
             </a>
+
             <a
-              href="#contact"
+              href="/#contact"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               Contact
@@ -62,7 +73,7 @@ export function Navbar() {
             </button>
           </nav>
 
-          {/* Mobile controls */}
+          {/* Mobile Controls */}
           <div className="md:hidden flex items-center gap-3">
             {/* Theme Toggle */}
             <button
@@ -96,23 +107,33 @@ export function Navbar() {
         {open && (
           <div className="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
             <nav className="flex flex-col px-6 py-4 gap-4 text-sm">
+              <Link
+                to="/lab"
+                onClick={closeMenu}
+                className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+              >
+                Lab
+              </Link>
+
               <a
-                href="#projects"
-                onClick={() => setOpen(false)}
+                href="/#projects"
+                onClick={closeMenu}
                 className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
               >
                 Projects
               </a>
+
               <a
-                href="#about"
-                onClick={() => setOpen(false)}
+                href="/#about"
+                onClick={closeMenu}
                 className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
               >
                 About
               </a>
+
               <a
-                href="#contact"
-                onClick={() => setOpen(false)}
+                href="/#contact"
+                onClick={closeMenu}
                 className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
               >
                 Contact

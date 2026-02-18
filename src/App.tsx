@@ -6,7 +6,8 @@ import { Navbar } from "./components/NavBar";
 import ClickSpark from "./components/ClickSpark";
 import { skills } from "./data/skills";
 import { ToolsAndFrameworks } from "./components/ToolsAndFrameworks";
-import { Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { Lab } from "./components/Lab";
 
 function App() {
   const imageLogos = skills.map((skill) => ({
@@ -25,14 +26,24 @@ function App() {
       >
         <Navbar />
 
-        {/* <Routes> */}
-          <Hero />
-          <ProjectsList />
-          <About />
-          <ToolsAndFrameworks logos={imageLogos} />
+        <Routes>
+          {/* Home Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <ProjectsList />
+                <About />
+                <ToolsAndFrameworks logos={imageLogos} />
+                <Contact />
+              </>
+            }
+          />
 
-          <Contact />
-        {/* </Routes> */}
+          {/* Lab Page */}
+          <Route path="/lab" element={<Lab />} />
+        </Routes>
       </ClickSpark>
     </div>
   );
