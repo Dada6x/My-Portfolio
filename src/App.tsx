@@ -6,6 +6,7 @@ import { Navbar } from "./components/NavBar";
 import ClickSpark from "./components/ClickSpark";
 import { skills } from "./data/skills";
 import { ToolsAndFrameworks } from "./components/ToolsAndFrameworks";
+import { Router, Routes } from "react-router-dom";
 
 function App() {
   const imageLogos = skills.map((skill) => ({
@@ -23,12 +24,15 @@ function App() {
         duration={400}
       >
         <Navbar />
-        <Hero />
-          <ProjectsList />
-        <About />
-        <ToolsAndFrameworks logos={imageLogos} />
 
-        <Contact />
+        {/* <Routes> */}
+          <Hero />
+          <ProjectsList />
+          <About />
+          <ToolsAndFrameworks logos={imageLogos} />
+
+          <Contact />
+        {/* </Routes> */}
       </ClickSpark>
     </div>
   );

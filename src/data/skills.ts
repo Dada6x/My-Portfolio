@@ -124,11 +124,11 @@ export const skills = [
     src: "https://skillicons.dev/icons?i=vscode",
     color: "#007ACC",
   },
-  {
-    name: "WebStorm",
-    src: "https://skillicons.dev/icons?i=webstorm",
-    color: "#00D2FF",
-  },
+  // {
+  //   name: "WebStorm",
+  //   src: "https://skillicons.dev/icons?i=webstorm",
+  //   color: "#00D2FF",
+  // },
   {
     name: "Visual Studio",
     src: "https://skillicons.dev/icons?i=visualstudio",
@@ -140,9 +140,9 @@ export const skills = [
     color: "#E95420",
   },
 
-  {
-    name: "Zustand",
-    src: "https://go-skill-icons.vercel.app/api/icons?i=zustand",
-    color: "#443e38",
-  },
+  // {
+  //   name: "Zustand",
+  //   src: "https://go-skill-icons.vercel.app/api/icons?i=zustand",
+  //   color: "#443e38",
+  // },
 ];

@@ -23,6 +23,13 @@ export function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <a
+              href="/Lab"
+              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
+            >
+              Lab
+            </a>
+
+            <a
               href="#projects"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >

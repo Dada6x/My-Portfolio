@@ -78,13 +78,13 @@ const techs = [
     text: "text-blue-600 dark:text-blue-400",
     bg: "bg-blue-50 dark:bg-blue-950/40",
   },
+  // {
+  //   name: "React",
+  //   text: "text-cyan-600 dark:text-cyan-400",
+  //   bg: "bg-cyan-50 dark:bg-cyan-950/40",
+  // },
   {
-    name: "React",
-    text: "text-cyan-600 dark:text-cyan-400",
-    bg: "bg-cyan-50 dark:bg-cyan-950/40",
-  },
-  {
-    name: "Nest",
+    name: "NestJs",
     text: "text-red-600 dark:text-red-400",
     bg: "bg-red-50 dark:bg-red-950/40",
   },

@@ -1,8 +1,7 @@
 
 ```
 Portfolioo
-├─ .bolt
-│  ├─ config.json
+├─ 
 │  └─ prompt
 ├─ components.json
 ├─ eslint.config.js

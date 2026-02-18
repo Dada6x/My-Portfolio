@@ -4,47 +4,76 @@ import Stack from "./Stack";
 export function About() {
   const obsidianNotes = [
     <img
+      loading="lazy"
       src={"/obsidian1.png"}
-      alt="Game 1"
+      alt="obsidian notes"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
+      loading="lazy"
       src={"/obsidian2.png"}
-      alt="Game 2"
+      alt="network img"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
+      loading="lazy"
       src={"/obsidian3.png"}
-      alt="Game 3"
+      alt="obsidian notes list"
       className="w-full h-full object-cover pointer-events-none"
     />,
   ];
+  const TedXImages = [
+    <img
+      loading="lazy"
+      src={"/ted2.jpg"}
+      alt="TEDx"
+      className="w-full h-full object-cover pointer-events-none"
+    />,
+    <img
+      loading="lazy"
+      src={"/ted1.png"}
+      alt="TEDx"
+      className="w-full h-full object-cover pointer-events-none"
+    />,
+  
+  ];
   const gameDev = [
     <img
+      loading="lazy"
       src={"/@mini-moss · minimoss.gif"}
-      alt="Game 1"
+      alt="game gif"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
+      loading="lazy"
       src={"/game.png"}
-      alt="Game 2"
+      alt="eleanore char"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
+      loading="lazy"
       src={"/game2.jpg"}
-      alt="Game 3"
+      alt="unity"
       className="w-full h-full object-cover pointer-events-none"
     />,
   ];
   const bytes4Future = [
     <img
+      loading="lazy"
       src={"/bytes.jpeg"}
-      alt="Game 1"
+      alt="bytes1"
       className="w-full h-full object-cover pointer-events-none"
     />,
     <img
+      loading="lazy"
       src={"/bytes2.jpeg"}
-      alt="Game 2"
+      alt="bytes2"
+      className="w-full h-full object-cover pointer-events-none"
+    />,
+    <img
+      loading="lazy"
+      src={"/bytesfinal.jpeg"}
+      alt="bytes2"
       className="w-full h-full object-cover pointer-events-none"
     />,
   ];
@@ -136,6 +165,7 @@ export function About() {
               </div>
             </div>
           </div>
+
           {/*! GAME DEVELOPMENT  SECTION */}
           <div className="p-8 md:p-12 border-r border-gray-200 dark:border-gray-800 border-t border-b">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -210,6 +240,47 @@ export function About() {
                     autoplayDelay={2000}
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* TED X volunteering  */}
+          <div className="p-8 md:p-12 border-r border-t border-gray-200 dark:border-gray-800 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="relative">
+                <div className="w-full max-w-[520px] aspect-[520/280]">
+                  <Stack
+                    cards={TedXImages}
+                    randomRotation
+                    autoplay
+                    autoplayDelay={2000}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="text-lg font-mono text-gray-500 dark:text-gray-600 mb-4 tracking-wider">
+                  · Volunteering
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-[16px]">
+                  I volunteered with{" "}
+                  <a
+                    href="https://tedxdamascus.sy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-white font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+                  >
+                    TEDx Damascus
+                  </a>{" "}
+                  in Syria as a{" "}
+                  <span className="text-black dark:text-white font-semibold">
+                    Backend Developer
+                  </span>{" "}
+                  on the technical team. I contributed to building and
+                  maintaining backend services that supported event operations,
+                  focusing on data handling, system reliability, and clean API
+                  design while collaborating closely with cross-functional teams
+                  under real production constraints.
+                </p>
               </div>
             </div>
           </div>
