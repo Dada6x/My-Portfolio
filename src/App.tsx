@@ -9,6 +9,7 @@ import { ToolsAndFrameworks } from "./components/ToolsAndFrameworks";
 import { Route, Routes } from "react-router-dom";
 import { Lab } from "./components/Lab";
 import CertificationsPage from "./components/certi";
+import { useEffect } from "react";
 
 function App() {
   const imageLogos = skills.map((skill) => ({
@@ -16,6 +17,28 @@ function App() {
     alt: skill.name,
     href: `https://www.google.com/search?q=${encodeURIComponent(skill.name)}`,
   }));
+
+  // In React, e.g., in App.tsx or a top-level component
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => e.preventDefault();
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J"].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white dark:bg-black transition-colors duration-500">
@@ -53,11 +76,6 @@ function App() {
 
 export default App;
 
-// edit the colors in the dark
-// make an game dev section  https://reactbits.dev/backgrounds/faulty-terminal
-// make an cybersecurity section https://reactbits.dev/backgrounds/letter-glitch
 //TODO
-// work the projects
-// project details
-// fonts
-// darkmode coloring
+// prevent inspector mode
+//
