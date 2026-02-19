@@ -3,30 +3,30 @@ import FooterSection from "./FooterSection";
 import { Award } from "lucide-react";
 
 const certifications: any[] = [
-  {
-    id: 1,
-    name: "Cisco CCNA",
-    icon: <Award className="w-6 h-6 text-yellow-500" />,
-    image: "game.png",
-  },
-  {
-    id: 2,
-    name: "Unity Certified",
-    icon: <Award className="w-6 h-6 text-purple-500" />,
-    image: "game.png",
-  },
-  {
-    id: 3,
-    name: "Python Fundamentals",
-    icon: <Award className="w-6 h-6 text-green-500" />,
-    image: "game.png",
-  },
-  {
-    id: 4,
-    name: "SQL Basics",
-    icon: <Award className="w-6 h-6 text-blue-500" />,
-    image: "game.png",
-  },
+  // {
+  //   id: 1,
+  //   name: "Cisco CCNA",
+  //   icon: <Award className="w-6 h-6 text-yellow-500" />,
+  //   image: "game.png",
+  // },
+  // {
+  //   id: 2,
+  //   name: "Unity Certified",
+  //   icon: <Award className="w-6 h-6 text-purple-500" />,
+  //   image: "game.png",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Python Fundamentals",
+  //   icon: <Award className="w-6 h-6 text-green-500" />,
+  //   image: "game.png",
+  // },
+  // {
+  //   id: 4,
+  //   name: "SQL Basics",
+  //   icon: <Award className="w-6 h-6 text-blue-500" />,
+  //   image: "game.png",
+  // },
 ];
 
 const CertificationsPage = () => {
