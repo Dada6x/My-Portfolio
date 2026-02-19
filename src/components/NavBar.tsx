@@ -3,7 +3,8 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import ClickSpark from "./ClickSpark";
-import CertificationsPage from './certi';
+// @ts-ignore
+import { HashLink } from 'react-router-hash-link';
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -12,9 +13,11 @@ export function Navbar() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800
+    <header
+      className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800
              bg-white/80 dark:bg-black/80 backdrop-blur
-             transition-colors duration-500">
+             transition-colors duration-500"
+    >
       <ClickSpark
         sparkSize={10}
         sparkRadius={20}
@@ -22,7 +25,6 @@ export function Navbar() {
         duration={400}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-16 h-16 flex items-center justify-between">
-          
           {/* Logo / Name */}
           <Link
             to="/"
@@ -34,6 +36,7 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 text-sm">
+            {/* LAB */}
             <Link
               to="/lab"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
@@ -47,27 +50,30 @@ export function Navbar() {
             >
               Certifications
             </Link>
-
-            <a
-              href="/#projects"
+            {/* PROJECTS */}
+            <HashLink
+              smooth
+              to="/#projects"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               Projects
-            </a>
+            </HashLink>
 
-            <a
-              href="/#about"
+            <HashLink
+              smooth
+              to="/#about"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               About
-            </a>
+            </HashLink>
 
-            <a
-              href="/#contact"
+            <HashLink
+              smooth
+              to="/#contact"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
             >
               Contact
-            </a>
+            </HashLink>
 
             {/* Theme Toggle */}
             <button

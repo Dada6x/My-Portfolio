@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import ClickSpark from "./ClickSpark";
-import FooterSection from "./footer";
+import FooterSection from "./FooterSection";
 
 type Status = "idle" | "sending" | "sent" | "error";
 

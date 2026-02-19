@@ -1,6 +1,6 @@
 import ClickSpark from "./ClickSpark";
 import { Cpu, Gamepad, Terminal, Github } from "lucide-react";
-import FooterSection from "./footer";
+import FooterSection from "./FooterSection";
 
 type Media = { type: "image" | "diagram" | "gif"; src: string; alt: string };
 
@@ -16,77 +16,81 @@ type Experiment = {
 
 export function Lab() {
   const experiments: Experiment[] = [
-    {
-      id: 1,
-      title: "Raspberry Pi Weather Station",
-      description:
-        "Monitoring temperature & humidity in my room with a Raspberry Pi. Multiple sensors and a mini-dashboard for live updates.",
-      category: "Raspberry Pi",
-      icon: <Cpu className="w-6 h-6" />,
-      media: [
-        {
-          type: "image",
-          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYQs3ItFKGqBrzhzAOWpz_7_2hy-qXtLQrg&s",
-          alt: "Raspberry Pi Setup",
-        },
-        {
-          type: "diagram",
-          src: "https://www.bgr.com/img/gallery/8-best-raspberry-pi-projects-for-beginners/l-intro-1763025830.jpg",
-          alt: "Circuit Diagram",
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "Unity Mini Game",
-      description:
-        "Prototype 2D platformer using Unity. Testing physics interactions and basic AI behavior.",
-      category: "Unity",
-      icon: <Gamepad className="w-6 h-6" />,
-      media: [
-        { type: "gif", src: "/game.png", alt: "Gameplay Preview" },
-        {
-          type: "gif",
-          src: "https://camo.githubusercontent.com/faeefc761132e4d9803b4120dabad9294d33752801ba579a7339706e6e7a11cf/68747470733a2f2f636f64652e76697375616c73747564696f2e636f6d2f6173736574732f646f63732f6f746865722f756e6974792f756e6974792d6f766572766965772e706e67",
-          alt: "Gameplay Preview",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Cisco Packet Tracer Lab",
-      description:
-        "Simulated a small office network with routers, switches, and VLAN segmentation.",
-      category: "Networking",
-      icon: <Terminal className="w-6 h-6" />,
-      media: [
-        {
-          type: "diagram",
-          src: "https://www.manageengine.com/network-monitoring/tech-topics/images/network-diagram-example3.png",
-          alt: "Network Diagram",
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "Rive Animation Test",
-      description:
-        "Interactive animations for portfolio UI. Testing triggers and state machines.",
-      category: "Animation",
-      icon: <Github className="w-6 h-6" />,
-      media: [
-        {
-          type: "gif",
-          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwgspidqX7_r7WlSmFCvmecum7xQbr6tJoHw&s",
-          alt: "Rive Animation Preview",
-        },
-        {
-          type: "gif",
-          src: "/images/rive-demo.gif",
-          alt: "Rive Animation Preview",
-        },
-      ],
-    },
+    // {
+    //   id: 1,
+    //   title: "Raspberry Pi Weather Station",
+    //   description:
+    //     "Monitoring temperature & humidity in my room with a Raspberry Pi. Multiple sensors and a mini-dashboard for live updates.",
+    //   category: "Raspberry Pi",
+    //   icon: <Cpu className="w-6 h-6" />,
+    //   media: [
+    //     {
+    //       type: "image",
+    //       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYQs3ItFKGqBrzhzAOWpz_7_2hy-qXtLQrg&s",
+    //       alt: "Raspberry Pi Setup",
+    //     },
+    //     {
+    //       type: "diagram",
+    //       src: "https://www.bgr.com/img/gallery/8-best-raspberry-pi-projects-for-beginners/l-intro-1763025830.jpg",
+    //       alt: "Circuit Diagram",
+    //     },
+    //   ],
+    //   link: "adwd",
+    // },
+    // {
+    //   id: 2,
+    //   title: "Unity Mini Game",
+    //   description:
+    //     "Prototype 2D platformer using Unity. Testing physics interactions and basic AI behavior.",
+    //   category: "Unity",
+    //   icon: <Gamepad className="w-6 h-6" />,
+    //   media: [
+    //     { type: "gif", src: "/game.png", alt: "Gameplay Preview" },
+    //     {
+    //       type: "gif",
+    //       src: "https://camo.githubusercontent.com/faeefc761132e4d9803b4120dabad9294d33752801ba579a7339706e6e7a11cf/68747470733a2f2f636f64652e76697375616c73747564696f2e636f6d2f6173736574732f646f63732f6f746865722f756e6974792f756e6974792d6f766572766965772e706e67",
+    //       alt: "Gameplay Preview",
+    //     },
+    //   ],
+    //   link: "adwd",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Cisco Packet Tracer Lab",
+    //   description:
+    //     "Simulated a small office network with routers, switches, and VLAN segmentation.",
+    //   category: "Networking",
+    //   icon: <Terminal className="w-6 h-6" />,
+    //   media: [
+    //     {
+    //       type: "diagram",
+    //       src: "https://www.manageengine.com/network-monitoring/tech-topics/images/network-diagram-example3.png",
+    //       alt: "Network Diagram",
+    //     },
+    //   ],
+    //   link: "adwd",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Rive Animation Test",
+    //   description:
+    //     "Interactive animations for portfolio UI. Testing triggers and state machines.",
+    //   link: "adwd",
+    //   category: "Animation",
+    //   icon: <Github className="w-6 h-6" />,
+    //   media: [
+    //     {
+    //       type: "gif",
+    //       src: "https://user-images.githubusercontent.com/13705472/217293837-c3f32a63-b4f2-4d7f-b1ae-ee77c5cda1c3.png",
+    //       alt: "Rive Animation Preview",
+    //     },
+    //     {
+    //       type: "gif",
+    //       src: "https://framerusercontent.com/images/su4VONiGsjOJGC4GVZKsm2yBo.png?width=3000&height=1568",
+    //       alt: "Rive Animation Preview",
+    //     },
+    //   ],
+    // },
   ];
 
   return (
@@ -105,7 +109,7 @@ export function Lab() {
         <div className="absolute inset-y-0 right-0 w-px bg-gray-200 dark:bg-gray-800" />
 
         {/* Header Container */}
-        <div className="max-w-7xl mx-auto">
+        {/* <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 border-gray-200 dark:border-gray-800">
             <div className="p-8 md:p-12">
               <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
@@ -120,9 +124,34 @@ export function Lab() {
               </p>
             </div>
           </div>
+        </div> */}
+
+               <div className="max-w-6xl mx-auto py-16 px-6 text-center">
+          {/* Label like your lab page */}
+          <div className="text-xs font-mono text-gray-500 dark:text-gray-600 mb-6 tracking-wider">
+            · 05 / Lab
+          </div>
+
+          <h2 className="text-5xl font-bold text-black dark:text-white mb-4 transition-colors duration-700">
+            Lab
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 text-sm transition-colors duration-700">
+            Welcome to my sandbox — a space to share experiments,
+                prototypes, and tinkering with code, hardware, and animations.
+          </p>
+        </div>
+        {/* coming soon  */}
+        <div className="max-w-7xl mx-auto p-8 md:p-12 text-center mb-12 border border-dashed border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-900">
+          <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white mb-4">
+            🚧 Coming Soon
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mb-4">
+            this section is still under development  real projects will be live soon!
+          </p>
         </div>
 
         {/* Experiments List */}
+
         {experiments.map((exp) => (
           <ClickSpark
             key={exp.id}
@@ -132,9 +161,8 @@ export function Lab() {
             duration={400}
           >
             <div className="relative group">
-{/* Full-width horizontal border */}
-<div className="absolute top-0 left-0 w-screen h-px bg-gray-200 dark:bg-gray-800 transition-colors duration-500" />
-
+              {/* Full-width horizontal border */}
+              <div className="absolute top-0 left-0 w-screen h-px bg-gray-200 dark:bg-gray-800 transition-colors duration-500" />
 
               {/* Card content */}
               <div
@@ -186,7 +214,20 @@ export function Lab() {
             </div>
           </ClickSpark>
         ))}
-
+        {/* the click to acton */}
+        <div className=" mx-auto text-center p-8 border-t border-gray-200 dark:border-gray-800">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 ">
+            Curious to try these experiments yourself?
+          </p>
+          <a
+            href="https://github.com/Dada6x"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-mono text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            · Explore My GitHub
+          </a>
+        </div>
         <FooterSection />
       </ClickSpark>
     </section>

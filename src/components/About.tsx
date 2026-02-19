@@ -23,12 +23,12 @@ export function About() {
     />,
   ];
   const TedXImages = [
-    <img
-      loading="lazy"
-      src={"/ted2.jpg"}
-      alt="TEDx"
-      className="w-full h-full object-cover pointer-events-none"
-    />,
+    // <img
+    //   loading="lazy"
+    //   src={"/ted2.jpg"}
+    //   alt="TEDx"
+    //   className="w-full h-full object-cover pointer-events-none"
+    // />,
     <img
       loading="lazy"
       src={"/ted1.png"}
@@ -262,7 +262,7 @@ export function About() {
                   · Volunteering
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl text-[16px]">
-                  I volunteered with{" "}
+                   I am currently volunteering with{" "}
                   <a
                     href="https://tedxdamascus.sy"
                     target="_blank"
