@@ -105,6 +105,16 @@ export const skills = [
     color: "#3ECF8E",
   },
   {
+    name: "Docusaurus",
+    src: "https://logo.svgcdn.com/logos/docusaurus.svg",
+    color: "#3ECF8E",
+  },
+  {
+    name: "Docker",
+    src: "https://skillicons.dev/icons?i=docker",
+    color: "#2396ed",
+  },
+  {
     name: "ShoreBird",
     src: "https://avatars.githubusercontent.com/u/115746275?v=4",
     color: "#e5d6c5",
@@ -130,6 +140,11 @@ export const skills = [
   //   color: "#00D2FF",
   // },
   {
+    name: "PostgreSQL",
+    src: "https://skillicons.dev/icons?i=postgres",
+    color: "#c994f7",
+  },
+  {
     name: "Visual Studio",
     src: "https://skillicons.dev/icons?i=visualstudio",
     color: "#c994f7",
@@ -139,7 +154,6 @@ export const skills = [
     src: "https://skillicons.dev/icons?i=ubuntu",
     color: "#E95420",
   },
-
   // {
   //   name: "Zustand",
   //   src: "https://go-skill-icons.vercel.app/api/icons?i=zustand",

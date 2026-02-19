@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import { Lab } from "./components/Lab";
 import CertificationsPage from "./components/certi";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const imageLogos = skills.map((skill) => ({
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black transition-colors duration-500">
+      <Analytics/>
       <ClickSpark
         sparkSize={10}
         sparkRadius={20}
@@ -77,5 +79,6 @@ function App() {
 export default App;
 
 //TODO
-// prevent inspector mode
-//
+// add damn experiments to the lab
+// add the certifications to this and into the linkedIn 
+// add section Live ( means live application vercel and live backends idk somehow )
