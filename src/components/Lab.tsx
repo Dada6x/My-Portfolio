@@ -137,7 +137,7 @@ export function Lab() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-sm transition-colors duration-700">
             Welcome to my sandbox — a space to share experiments,
-                prototypes, and tinkering with code, hardware, and animations.
+                prototypes, and tinkering with code, hardware.
           </p>
         </div>
         {/* coming soon  */}
